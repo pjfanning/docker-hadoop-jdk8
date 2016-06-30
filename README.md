@@ -23,20 +23,10 @@ In order to use the Docker image you have just build or pulled use:
 docker run -it pjfanning/docker-hadoop-jdk8:2.7.1 /etc/bootstrap.sh -bash
 ```
 
+Exposing ports to your local environment (assuming 192.168.99.100 is your docker machine IP)
 ```
 docker run -it -p 192.168.99.100:9000:9000 -p 192.168.99.100:50070:50070 -p 192.168.99.100:8030-8033:8030-8033 -p 192.168.99.100:31000-31100:31000-31100 pjfanning/docker-hadoop-jdk8:2.7.1 /etc/bootstrap.sh -bash
 ```
-
-# Hdfs ports
-EXPOSE 50010 50020 50070 50075 50090 8020 9000
-# Mapred ports
-EXPOSE 19888
-#Yarn ports
-EXPOSE 8030-8033 8040 8042 8088
-#Spark Executor ports
-EXPOSE 31000-31100
-#Other ports
-EXPOSE 49707 2122
 
 ## Testing
 
