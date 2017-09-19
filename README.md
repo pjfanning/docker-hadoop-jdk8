@@ -40,3 +40,4 @@ bin/hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.1.jar grep i
 # check the output
 bin/hdfs dfs -cat output/*
 ```
+
